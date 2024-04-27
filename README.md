@@ -22,7 +22,7 @@ protoc --twirp_ruby_out=proto/ --ruby_out=proto/ -I proto/ proto/cheddar.proto
 
 This requires a homebrew and golang to be present on a machine. This is not a great solution for a regular ruby developer.
 
-## more information
+## Solution
 The protoc utility knows that the github.com/twitchtv/twirp-ruby/protoc-gen-twirp_ruby plugin is installed on the system through the PATH environment variable. When you run the protoc command to generate code, it looks for the installed plugins in the directories specified in the PATH environment variable. The protoc-gen-twirp_ruby plugin needs to be installed in one of the directories in the PATH so that protoc can find and use it to generate the Twirp-specific code. Specifically, the steps are:
 
 1. Install the protoc-gen-twirp_ruby plugin by running `go install github.com/twitchtv/twirp-ruby/protoc-gen-twirp_ruby@latest` or by downloading the binary and placing it in a directory in your PATH.
