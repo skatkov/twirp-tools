@@ -29,13 +29,11 @@ The protoc utility knows that the github.com/twitchtv/twirp-ruby/protoc-gen-twir
 2. Set the PATH environment variable to include the directory where the protoc-gen-twirp_ruby plugin is installed. For example, if you installed it in the `$GOBIN` directory, you would add `$GOBIN` to your PATH.
 3. When you run the protoc command with the `--twirp_ruby_out` flag, protoc will look for the protoc-gen-twirp_ruby plugin in the directories specified in your PATH and use it to generate the Twirp-specific Ruby code.
 
-So in summary, the protoc utility knows about the Twirp Ruby plugin because it is installed in a directory that is part of the system's PATH environment variable, allowing protoc to locate and use the plugin during the code generation process.
 
-
-## Using plugin without modiying a PATH
-It's possible to include plugin, without placing it into a folder defined in PATH
+But It's also possible to include plugin, without placing it into a folder defined in PATH. Like the following:
 `protoc --twirp_ruby_out=proto/ --ruby_out=proto/ -I proto/ proto/cheddar.proto --plugin=protoc-gen-twirp_ruby`
 
+Using this command line, we can potentially drop a need for golang and homebrew. We can use protoc utility packaged with grpc-tools gem and offer a twirp-tools gem, that will package a ruby plugin required to create a dsl.
 
 # Inspiration:
 - gruf - https://github.com/bigcommerce/gruf/blob/main/gruf.gemspec
