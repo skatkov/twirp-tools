@@ -36,6 +36,5 @@ But It's also possible to include plugin, without placing it into a folder defin
 Using this command line, we can potentially drop a need for golang and homebrew. We can use protoc utility packaged with grpc-tools gem and offer a twirp-tools gem, that will package a ruby plugin required to create a dsl.
 
 # Inspiration:
-- gruf - https://github.com/bigcommerce/gruf/blob/main/gruf.gemspec
 - grpc-tools - https://github.com/grpc/grpc/tree/master/src/ruby/tools
 - litestreap-ruby - https://github.com/fractaledmind/litestream-ruby
