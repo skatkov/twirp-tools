@@ -4,7 +4,11 @@ require_relative "tools/version"
 
 module Twirp
   module Tools
-    class Error < StandardError; end
-    # Your code goes here...
+    
   end
 end
+
+
+require_relative "tools/version"
+require_relative "tools/upstream"
+require_relative "tools/commands"
