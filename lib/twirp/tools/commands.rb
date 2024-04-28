@@ -3,7 +3,7 @@ require_relative "upstream"
 module Twirp
     module Tools
       module Commands
-        DEFAULT_DIR = File.expand_path(File.join(__dir__, "..", "..", "exe"))
+        DEFAULT_DIR = File.expand_path(File.join(__dir__, "..", "..", "..", "exe"))
         GEM_NAME = "protoc-gen-twirp_ruby"
 
         # raised when the host platform is not supported by upstream litestream's binary releases
