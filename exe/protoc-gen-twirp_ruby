@@ -1,0 +1,12 @@
+#! /usr/bin/env ruby
+# because rubygems shims assume a gem's executables are Ruby
+
+require_relative "../lib/twirp/tools/commands"
+
+begin
+  command = [Twirp::Tools::Commands.executable, *ARGV]
+  exec(*command)
+rescue Twirp::Tools::Commands::UnsupportedPlatformException, Twirp::Tools::Commands::ExecutableNotFoundException => e
+  warn("ERROR: " + e.message)
+  exit 1
+end

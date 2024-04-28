@@ -6,3 +6,5 @@
 /pkg/
 /spec/reports/
 /tmp/
+/exe/*/protoc-gen-twirp_ruby
+.DS_Store
